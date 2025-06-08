@@ -71,9 +71,9 @@
 
         <section class="gridReportes">
             @foreach ([
-                ['ruta' => route('reportes.vehiculos'), 'titulo' => '🚗 Órdenes con Detalle'],
-                ['ruta' => route('reportes.facturacion'), 'titulo' => '📄 Facturas Emitidas'],
-                ['ruta' => route('reportes.servicios'), 'titulo' => '📝 Bitácora de Cambios'],
+                ['ruta' => route('reportes.vehiculos'),  'titulo' => '🚗 Órdenes con Detalle'],
+                ['ruta' => route('reportes.facturacion'),'titulo' => '📄 Facturas Emitidas'],
+                ['ruta' => route('reportes.repuestos'),  'titulo' => '🧩 Repuestos con Stock Bajo'],
             ] as $reporte)
                 <a href="{{ $reporte['ruta'] }}" class="reporteCard">
                     <h3>{{ $reporte['titulo'] }}</h3>
@@ -85,8 +85,8 @@
 
         <section class="gridReportes">
             @foreach ([
-                ['ruta' => '/clientes', 'titulo' => '👤 Gestión de Clientes'],
-                ['ruta' => '/vehiculos', 'titulo' => '🚘 Gestión de Vehículos'],
+                ['ruta' => route('clientes.index'),  'titulo' => '👤 Gestión de Clientes'],
+                ['ruta' => route('vehiculos.index'), 'titulo' => '🚘 Gestión de Vehículos'],
             ] as $item)
                 <a href="{{ $item['ruta'] }}" class="reporteCard">
                     <h3>{{ $item['titulo'] }}</h3>
