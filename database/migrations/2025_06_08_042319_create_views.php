@@ -20,7 +20,7 @@ class CreateViews extends Migration
         DB::unprepared('
             CREATE OR REPLACE VIEW vista_repuestos_bajos AS
             SELECT * FROM repuesto
-            WHERE stock < 5;
+            WHERE stock < 50;
         ');
 
         // Vista de facturas completas
