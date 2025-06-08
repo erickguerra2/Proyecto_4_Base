@@ -17,6 +17,6 @@ Route::get('/vehiculos', function () {
 })->name('vehiculos.index');
 
 // Rutas para reportes
-Route::get('/reportes/vehiculos-reparacion', [ReporteController::class, 'vehiculosReparacion'])->name('reportes.vehiculos');
-Route::get('/reportes/servicios-populares', [ReporteController::class, 'servicios'])->name('reportes.servicios');
-Route::get('/reportes/facturacion-mensual', [ReporteController::class, 'facturacion'])->name('reportes.facturacion');
+Route::get('/reportes/ordenes', [ReporteController::class, 'vehiculosReparacion'])->name('reportes.vehiculos');
+Route::get('/reportes/facturas', [ReporteController::class, 'facturacion'])->name('reportes.facturacion');
+Route::get('/reportes/bitacora', [ReporteController::class, 'servicios'])->name('reportes.servicios');

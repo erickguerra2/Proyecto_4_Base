@@ -1,4 +1,3 @@
-{{-- resources/views/panel.blade.php --}}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,11 +12,12 @@
             flex-direction: column;
             align-items: center;
             font-family: 'Segoe UI', sans-serif;
+            overflow-y: auto;
         }
 
         .autosTitle {
             font-size: 2.8rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0 1rem;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -45,6 +45,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-decoration: none;
         }
 
         .reporteCard:hover {
@@ -70,9 +71,9 @@
 
         <section class="gridReportes">
             @foreach ([
-                ['ruta' => route('reportes.vehiculos'), 'titulo' => '🚗 Vehículos en Reparación'],
-                ['ruta' => route('reportes.servicios'), 'titulo' => '🛠️ Servicios Más Solicitados'],
-                ['ruta' => route('reportes.facturacion'), 'titulo' => '📊 Facturación Mensual'],
+                ['ruta' => route('reportes.vehiculos'), 'titulo' => '🚗 Órdenes con Detalle'],
+                ['ruta' => route('reportes.facturacion'), 'titulo' => '📄 Facturas Emitidas'],
+                ['ruta' => route('reportes.servicios'), 'titulo' => '📝 Bitácora de Cambios'],
             ] as $reporte)
                 <a href="{{ $reporte['ruta'] }}" class="reporteCard">
                     <h3>{{ $reporte['titulo'] }}</h3>
