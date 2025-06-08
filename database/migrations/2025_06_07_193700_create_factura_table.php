@@ -13,7 +13,7 @@ class CreateFacturaTable extends Migration
             $table->unsignedInteger('id_orden');
             $table->date('fecha_emision');
             $table->decimal('total_facturado', 10, 2);
-            $table->enum('forma_pago', ['efectivo', 'tarjeta', 'transferencia']);
+            $table->enum('forma_pago', ['efectivo', 'tarjeta', 'transferencia', 'credito']); // Agregado 'credito'
 
             $table->foreign('id_orden')
                   ->references('id_orden')
