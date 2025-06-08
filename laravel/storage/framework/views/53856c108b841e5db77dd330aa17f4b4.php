@@ -1,4 +1,4 @@
-{{-- resources/views/panel.blade.php --}}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -69,29 +69,30 @@
         <h1 class="autosTitle">📋 Panel del Taller</h1>
 
         <section class="gridReportes">
-            @foreach ([
+            <?php $__currentLoopData = [
                 ['ruta' => '/resultados?tipo=vehiculos_reparacion', 'titulo' => '🚗 Vehículos en Reparación'],
                 ['ruta' => '/resultados?tipo=servicios_populares', 'titulo' => '🛠️ Servicios Más Solicitados'],
                 ['ruta' => '/resultados?tipo=facturacion_mensual', 'titulo' => '📊 Facturación Mensual'],
-            ] as $reporte)
-                <a href="{{ $reporte['ruta'] }}" class="reporteCard">
-                    <h3>{{ $reporte['titulo'] }}</h3>
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $reporte): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <a href="<?php echo e($reporte['ruta']); ?>" class="reporteCard">
+                    <h3><?php echo e($reporte['titulo']); ?></h3>
                 </a>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </section>
 
         <h2 class="autosTitle" style="margin-top: 4rem;">🗂️ Gestión de Datos</h2>
 
         <section class="gridReportes">
-            @foreach ([
+            <?php $__currentLoopData = [
                 ['ruta' => '/clientes', 'titulo' => '👤 Gestión de Clientes'],
                 ['ruta' => '/vehiculos', 'titulo' => '🚘 Gestión de Vehículos'],
-            ] as $item)
-                <a href="{{ $item['ruta'] }}" class="reporteCard">
-                    <h3>{{ $item['titulo'] }}</h3>
+            ]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <a href="<?php echo e($item['ruta']); ?>" class="reporteCard">
+                    <h3><?php echo e($item['titulo']); ?></h3>
                 </a>
-            @endforeach
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </section>
     </div>
 </body>
 </html>
+<?php /**PATH /var/www/laravel/resources/views/dashboard.blade.php ENDPATH**/ ?>
