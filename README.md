@@ -2,6 +2,9 @@
 
 * Docker
 * Docker Compose
+* PHP >= 8.1
+* Composer
+* PostgreSQL
 
 ## Instalación
 
