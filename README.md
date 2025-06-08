@@ -5,7 +5,6 @@
 
 ## Instalación
 
-Sigue estos pasos para poner en marcha el proyecto localmente:
 
 1. **Renombrar el archivo `.env.example`**
 
