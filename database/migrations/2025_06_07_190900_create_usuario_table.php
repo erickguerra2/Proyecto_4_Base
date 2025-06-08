@@ -13,7 +13,7 @@ class CreateUsuarioTable extends Migration
             $table->string('nombre_usuario', 50)->unique();
             $table->string('password', 255);
             $table->unsignedInteger('id_rol');
-
+            
             $table->foreign('id_rol')
                   ->references('id_rol')
                   ->on('rol')
