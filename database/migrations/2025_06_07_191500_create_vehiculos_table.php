@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVehiculoTable extends Migration
+class CreateVehiculosTable extends Migration
 {
     public function up(): void
     {
@@ -24,7 +24,7 @@ class CreateVehiculoTable extends Migration
                   ->onDelete('cascade');
             $table->timestamps();
         });
-    
+
     }
 
     public function down(): void
