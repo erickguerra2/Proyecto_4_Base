@@ -14,7 +14,7 @@ class CreateRolTable extends Migration
             $table->timestamps();
         });
     }
-
+    
     public function down(): void
     {
         Schema::dropIfExists('rol');
